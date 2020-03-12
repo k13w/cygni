@@ -1,10 +1,13 @@
 {
-   "type": "postgres",
-   "host": "localhost",
+   "type": "mongodb",
+   "host": "cygni-s-qangt.mongodb.net",
    "port": 5432,
-   "username": "postgres",
-   "password": "heaven",
-   "database": "cygni-s",
+   "username": "sacred",
+   "password": "Heaven*1337",
+   "database": "test",
+   "disabledIfNotEnabledImplicitly": true,
+   "useNewUrlParser": true,
+   "useUnifiedTopology": true,
    "synchronize": true,
    "logging": false,
    "entities": [
