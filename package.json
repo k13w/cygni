@@ -1,24 +1,38 @@
 {
    "name": "cygni",
    "version": "0.0.1",
-   "description": "Awesome project developed with TypeORM.",
+   "description": "System upload files.",
    "devDependencies": {
+      "@types/bcryptjs": "^2.4.2",
+      "@types/body-parser": "^1.19.0",
+      "@types/cors": "^2.8.6",
+      "@types/express": "^4.17.3",
+      "@types/helmet": "^0.0.45",
+      "@types/jest": "^25.1.4",
+      "@types/jsonwebtoken": "^8.3.8",
       "@types/node": "^8.0.29",
+      "jest": "^25.1.0",
       "ts-node": "3.3.0",
       "ts-node-dev": "^1.0.0-pre.44",
       "typescript": "3.3.3333"
    },
    "dependencies": {
+      "bcryptjs": "^2.4.3",
       "body-parser": "^1.19.0",
+      "class-validator": "^0.11.0",
       "cors": "^2.8.5",
       "express": "^4.17.1",
       "helmet": "^3.21.3",
+      "jsonwebtoken": "^8.5.1",
       "mongodb": "^3.5.5",
       "pg": "^7.3.0",
       "reflect-metadata": "^0.1.10",
       "typeorm": "0.2.24"
    },
    "scripts": {
-      "start": "ts-node-dev --respawn --transpileOnly src/index.ts"
+      "start": "ts-node-dev --respawn --transpileOnly src/index.ts",
+      "production": "tsc && node ./build.index.js",
+      "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+      "test": "Jest"
    }
 }

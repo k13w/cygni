@@ -1,11 +1,6 @@
 {
    "type": "mongodb",
-   "host": "cygni-s-qangt.mongodb.net",
-   "port": 5432,
-   "username": "sacred",
-   "password": "Heaven*1337",
-   "database": "test",
-   "disabledIfNotEnabledImplicitly": true,
+   "url": "",
    "useNewUrlParser": true,
    "useUnifiedTopology": true,
    "synchronize": true,

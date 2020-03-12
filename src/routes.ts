@@ -1,9 +1,13 @@
 import { Router } from 'express';
 import UserController from './controllers/UserController';
+import AuthController from './controllers/AuthController';
 
 const routes = Router();
 
-routes.get('/users', UserController.index);
-routes.post('/users', UserController.store);
+routes.get('/users', UserController.listAll);
+routes.post('/users', UserController.newUser);
+routes.put('/users', UserController.editUser);
+routes.delete('/users', UserController.deleteUser);
+routes.post('/login', AuthController.login);
 
 export default routes;
