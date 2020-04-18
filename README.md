@@ -1,6 +1,6 @@
 # Cygni
 ## A modern file upload to the cloud
-### This project uses redux and redux-saga
+#### This project uses React redux and Redux-saga
 
 ## <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' height='60' alt="react logo" />
 
