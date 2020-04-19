@@ -20,8 +20,8 @@ export default function authReducer(state = INITIAL_STATE, action: any) {
 
       case AuthTypes.AUTH_SING_IN_SUCCESS:
         return {
-          ...draft, loading: false, error: false, 
-          data: action.payload.data, token: action.payload.token
+          ...draft, loading: false, error: false, loggedIn: true,
+          data: action.payload.data, token: action.payload.token          
         }
 
       case AuthTypes.AUTH_SING_FAILURE:

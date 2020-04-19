@@ -26,6 +26,10 @@ export interface User {
   token: string;
 }
 
+export interface Payload {
+  data: User;
+}
+
 /**
  * State types
  */

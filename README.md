@@ -20,8 +20,6 @@ Run `npm i` command or `yarn`
 
 Setup database settings inside `ormconfig.json` file `Default Database mongodb`
 
-Database can be one of the following values: mysql, mariadb, postgres, cockroachdb, sqlite, mssql, oracle, mongodb, cordova, react-native, expo, nativescript.
-
 Run `npm run migration:run` or `yarn migration:run` to create user admin
 
 Run `npm start` command or `yarn start`
@@ -31,3 +29,7 @@ Run `npm start` command or `yarn start`
 Run `npm i` command or `yarn`
 
 Run `npm start` command or `yarn start`
+
+
+### Databases
+###### mysql, mariadb, postgres, cockroachdb, sqlite, mssql, oracle, mongodb, cordova, react-native, expo, nativescript.

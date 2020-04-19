@@ -12,7 +12,7 @@ import { User } from '../../store/types';
 const RightMainPanel: React.FC = () => {
   const dispatch = useDispatch();
 
-  const handleSingIn: SubmitHandler<User> = (data) => {
+  const handleSingIn: SubmitHandler<User> = async (data) => {
     dispatch(singInRequest(data));
   };
 
@@ -24,7 +24,7 @@ const RightMainPanel: React.FC = () => {
       </Header>
       <Panel>
         <Form onSubmit={handleSingIn}>
-          <Input name="email" type="email" placeholder="E-mail" />
+          <Input name="email" type="text" placeholder="E-mail" />
           <br />
           <Input name="password" type="password" placeholder="Password" />
           <h6>Forgot Password?</h6>

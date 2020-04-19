@@ -11,15 +11,15 @@ class AuthController {
         let { email, password } = req.body;
 
         if (!(email && password)) {
-          res.status(400).send({ error: 'username ou password invalid!' });
+          res.status(400).send({ error: 'email or password invalid!' });
         }
-
         //Get user from database
         const userRepository = getRepository(User);
         let user: User;
         
         try {
             user = await userRepository.findOneOrFail({ where: { email } });
+            console.log(user.password)
         } catch (error) {
             res.status(401).send({ error: 'Email dont search in our database!' });
         }
@@ -34,7 +34,7 @@ class AuthController {
           userId: user.id, username: user.username
             }, config.secret, { expiresIn: '1h' });
 
-        res.send(token);
+        res.send({ user, token });
     };
 
     static changePassword = async (req: Request, res: Response) => {

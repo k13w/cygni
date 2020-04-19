@@ -4,8 +4,6 @@ import { useField } from '@unform/core';
 export const Input: React.FC<any> = ({ name, ...rest } ) => {
     const inputRef = useRef(null)
     const { fieldName, registerField } = useField(name);
-    
-    console.log(inputRef.current)
 
     useEffect(() => {
         registerField({

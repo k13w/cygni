@@ -5,14 +5,16 @@ import api from '../../../services/api';
 import history from '../../../services/history';
 
 import { singInSuccess, singFailure } from './actions';
-import { User } from '../../types';
+import { Payload } from '../../types';
 
-export function* singIn( { payload }: { payload: User }) {
+export function* singIn( { payload }: { payload: Payload }) {
   try {
-    const { email, password } = payload;
-    console.log(payload)
+    const { data } = payload;
 
-    if (!email || !password) {
+    const email = data.email;
+    const password = data.password;
+
+    if (!data.email || !data.password) {
       toast.error('preencha todos os seus dados!');
       return;
     }
@@ -25,11 +27,13 @@ export function* singIn( { payload }: { payload: User }) {
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
-    put(singInSuccess(user, token));
+    yield put(singInSuccess(user, token));
 
-    history.push('dashboard')
-  } catch (err) {
-    toast.error('Houve um problema com a autenticação, verifique suas credenciais!');
+    history.push('/dashboard')
+
+  } catch (error) {
+    console.log(error.response.data.error);
+    toast.error(error.response.data.error);
     yield put(singFailure());
   }
 }

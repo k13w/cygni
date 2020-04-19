@@ -9,7 +9,7 @@ export const singInRequest = (data: User) => {
 
 export const singInSuccess = (user: User, token: User): any => {
   return {
-    type: AuthTypes.AUTH_SING_IN_REQUEST,
+    type: AuthTypes.AUTH_SING_IN_SUCCESS,
     payload: { user, token }
   }
 }
