@@ -13,15 +13,15 @@ const INITIAL_STATE: UserState = {
 export default function authReducer(state = INITIAL_STATE, action: any) {
   return produce(state, draft => {
     switch (action.type) {
-      case AuthTypes.AUTH_SING_IN_REQUEST:
-        return { 
-          ...draft, loading: true 
-        }
+      case AuthTypes.AUTH_SING_IN_REQUEST: 
+      return { 
+        ...draft, loading: true
+      }
 
       case AuthTypes.AUTH_SING_IN_SUCCESS:
         return {
           ...draft, loading: false, error: false, 
-          data: action.payload.user, token: action.payload.token
+          data: action.payload.data, token: action.payload.token
         }
 
       case AuthTypes.AUTH_SING_FAILURE:

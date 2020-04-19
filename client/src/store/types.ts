@@ -10,6 +10,11 @@ export enum AuthTypes {
   AUTH_SING_OUT = '@auth/SING_OUT',
 }
 
+export interface Action<T> {
+  type: AuthTypes;
+  payload: T;
+}
+
 /**
  * Data types
  */
@@ -29,5 +34,5 @@ export interface UserState {
   readonly token: null | string;
   readonly loading: boolean;
   readonly loggedIn: boolean;
-  readonly error: boolean;
+  readonly error?: boolean;
 }

@@ -7,7 +7,7 @@ import { User } from "../entity/User";
 import config from "../config/jwt";
 
 class AuthController {
-    static login = async (req: Request, res: Response) => {
+    static sessions = async (req: Request, res: Response) => {
         let { email, password } = req.body;
 
         if (!(email && password)) {

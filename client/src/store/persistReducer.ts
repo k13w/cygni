@@ -4,7 +4,7 @@ import { Reducer } from 'redux'
 
 export default (reducers: Reducer) => {
   const persistedReducer = persistReducer({
-    key: 'syncloud',
+    key: 'cygni',
     storage,
     whitelist: ['auth', 'user', 'uploads'],
     },

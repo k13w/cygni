@@ -2,8 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
-import { Input } from '@rocketseat/unform';
 import { Container, Header, Panel  } from './styles';
+import { Input } from '../Form/Input';
 
 import { singInRequest } from '../../store/modules/auth/actions';
 
@@ -12,8 +12,8 @@ import { User } from '../../store/types';
 const RightMainPanel: React.FC = () => {
   const dispatch = useDispatch();
 
-  const handleSingIn: SubmitHandler<User> = (email) => {
-    dispatch(singInRequest(email));
+  const handleSingIn: SubmitHandler<User> = (data) => {
+    dispatch(singInRequest(data));
   };
 
   return (

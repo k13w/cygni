@@ -1,12 +1,21 @@
-import { action } from 'typesafe-actions';
 import { AuthTypes, User } from '../../types';
 
-export const singInRequest = (email: User) => { 
-  action(AuthTypes.AUTH_SING_IN_REQUEST, { email });
+export const singInRequest = (data: User) => { 
+  return {
+    type: AuthTypes.AUTH_SING_IN_REQUEST,
+    payload: { data }
+  }
 }
 
 export const singInSuccess = (user: User, token: User): any => {
-  action(AuthTypes.AUTH_SING_IN_SUCCESS, { user, token });
+  return {
+    type: AuthTypes.AUTH_SING_IN_REQUEST,
+    payload: { user, token }
+  }
 }
 
-export const singFailure = () => action(AuthTypes.AUTH_SING_FAILURE);
+export const singFailure = () => {
+  return {
+    type: AuthTypes.AUTH_SING_FAILURE,
+  }
+}

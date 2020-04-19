@@ -7,15 +7,10 @@ import history from '../../../services/history';
 import { singInSuccess, singFailure } from './actions';
 import { User } from '../../types';
 
-interface DispatchProps {
-  singInSuccess(user: User, token: User): void;
-}
-
-type Props = User & DispatchProps;
-
-export function* singIn(payload: User) {
+export function* singIn( { payload }: { payload: User }) {
   try {
     const { email, password } = payload;
+    console.log(payload)
 
     if (!email || !password) {
       toast.error('preencha todos os seus dados!');
@@ -23,7 +18,7 @@ export function* singIn(payload: User) {
     }
 
     const res = yield call(api.post, 'sessions', {
-      email
+      email, password
     });
 
     const { user, token } = res.data;
