@@ -8,10 +8,12 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Quantico&display=swap');
   }
   
   h1, button {
-    @import url('https://fonts.googleapis.com/css?family=Quantico&display=swap');
     font-family: 'Quantico', sans-serif;
   }
 
@@ -20,13 +22,19 @@ export default createGlobalStyle`
     margin: 0 auto;
   }
 
-  .fonter {
-    @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+  hr {
+    position: relative;
+    margin: 20px;
+    opacity: 0.3;
+    margin-top: 50px;
   }
 
-  .user-font {
-    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-    font-family: 'Montserrat', sans-serif;
+  h4 {
+    font-family: 'Economica', sans-serif;
+  }
+
+  .footer {
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+    font-family: 'Baloo Bhaina 2', cursive;
   }
 `;

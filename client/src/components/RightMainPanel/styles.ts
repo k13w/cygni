@@ -16,7 +16,7 @@ export const Header = styled.div`
     h4 {
         font-size: 20px;
         color: #412E68;
-        text-align: center;
+        margin-left: 110px;
         margin-top: 10px;
     }
 `;
@@ -27,29 +27,68 @@ export const Panel = styled.div`
     align-items: center;
     margin-top: 40px;
     input {
-        padding: 10px 280px 10px 10px;
-        border-radius: 16px;
+        min-width: 200px;
+        font-size: 12pt;
+        padding: 12px 280px 12px 12px;
+        border-radius: 10px;
         border: 1px solid #412E68;
         margin: 10px;
+        color: #412E68;
+    }
+    input:focus {
+        border: 2px solid #412E68;
     }
     h6 {
         font-size: 16px;
-        margin-left: 320px;
+        margin-left: 362px;
+        color: #412E68;
+        font-family: 'Economica', sans-serif;
     }
-    button {
-        margin-left: 120px;
-        margin-top: 40px;
-        text-align: center;
-        width: 260px;
+    button {    
+        width: 200px;
         height: 44px;
+        text-decoration: none;
+        margin-left: 12px;
+        margin-top: 10px;
+        text-align: center;
         background-color: #412E68;
-        border-radius: 26px;
+        border-radius: 10px;
         border: none;
         color: white;
-        font-size: 22px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: 0.8;
     }
 `;
 
-
-export const FormLogin = styled.form`
+export const NewUser = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    h4 {
+        text-align: center;
+    }
+    button {
+        width: 260px;
+        height: 44px;
+        text-decoration: none;
+        margin-left: 12px;
+        margin-top: 16px;
+        text-align: center;
+        background-color: none;
+        border-radius: 10px;
+        border: 1px solid #412E68;
+        color: black;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #412E68;
+        color: white;
+        border: none;
+        outline: none;
+    }
 `;

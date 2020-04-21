@@ -1,6 +1,6 @@
 {
    "type": "mongodb",
-   "url": "mongodb+srv://heaven:heaven*1337@cygni-s-qangt.mongodb.net/test?retryWrites=true&w=majority",
+   "url": "",
    "useNewUrlParser": true,
    "useUnifiedTopology": true,
    "synchronize": true,
